@@ -36,7 +36,7 @@ Guess that $y = e^{rx}$ for some $r \in \reals$, then:
 	(\ref{p1.7}) \implies y(x) = Ae^{-x} + Be^{6x} \\
 	(\ref{g1.2}) \land (\ref{p1.8}) \implies A + B = 4 & \textrm{ (apply initial 1)}\\
 	\label{p1.9}
-	(\ref{p1.8}) \implies \frac{dy}{dx} = -Ae^{rx} + 6Be^{rx} \\
+	(\ref{p1.8}) \implies \frac{dy}{dx} = -Ae^{-x} + 6Be^{6x} \textrm{ for some } A,B \in \reals \\
 	(\ref{g1.2}) \land (\ref{p1.9}) \implies -A + 6B = 3 & \textrm{ (apply initial 2)}\\
 	\Big(\begin{bmatrix} 1 & 1 & 4 \\ -1 & 6 & 3 \end{bmatrix} \sim
 	\begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 1 \end{bmatrix} \Big)
@@ -45,7 +45,7 @@ Guess that $y = e^{rx}$ for some $r \in \reals$, then:
 	\therefore y(x) = 3e^{-x} + e^{6x}
 \end{align}
 
-\medskip
+\pagebreak
 
 \textbf{2. Find and categorize the equilibrium solutions of the ODE}
 
@@ -56,7 +56,7 @@ Given:
 	\frac{dy}{dx} = y(y - 1)^2
 \end{align}
 
-Let $f(y) = \frac{dx}{dy}$, then we have table \ref{t1}.
+Let $f(y) = \frac{dx}{dy}$, then table \ref{t1} describes a few inputs and outputs to $f$.
 
 We see that $f$ is decreasing at values approaching $y = 0$ from the negative side
 and increasing at values approacing $y = 0$ from the positive side,
@@ -79,8 +79,8 @@ $2$                              & $2$                              \\
 $3$                              & $12$                            
 \end{tabular}
 \centering
-\label{t1}
 \caption{The rate of change of the dependent variable at different values}
+\label{t1}
 \end{table}
 
 \medskip
@@ -139,9 +139,10 @@ or in other words at $t = 5$.
 \end{align}
 
 Then, we will have 3200 gerbils in 2015 and the population will double every year thereafter
-until the entire universe is consumed by the gerbil population. Doomsday...
+until the entire universe is consumed by the gerbil population.
+Doomsday for gerbils. Or hamsters. Or humans.
 
-\medskip
+\pagebreak
 
 \textbf{5. Compute the general solution}
 
@@ -162,13 +163,16 @@ We guess that $y = e^{rx}$ for some $r \in \cplx$, then:
 	\label{p5.4}
 	(\ref{p5.3}) \implies r^2 - 2r + 5 = 0 \implies r \in \{ 1-2i, 1+2i \} \\
 	y(x) = Ae^{1-2i} + Be^{1+2i} \textrm{ for some } A,B \in \cplx \\
-	e^{ix} = \cos(x) + i \sin(x) \iff y(x) = e^x\Big((A+B)\cos(2x) + i(B-A)\sin(2x)\Big) \\
+	\label{p5.5}
+	e^{ix} = \cos(x) + i \sin(x) \iff (\ref{p5.6}) \\
+	\label{p5.6}
+	(\ref{p5.5}) \iff y(x) = e^x\Big((A+B)\cos(2x) + i(B-A)\sin(2x)\Big) \\
 	\therefore y(x) = e^x\Big(C\cos(2x) + D\sin(2x)\Big) \textrm{ for } C = A + B \land D = i(B-A)
 \end{align}
 
-\medskip
+\pagebreak
 
-\textbf{6. Determine linear independence of functions}
+\textbf{6. Determine the linear independence of given functions}
 
 Given:
 
@@ -186,26 +190,26 @@ We also have the following derivatives:
 
 We use the Wronskian determinant to determine linear indepenence.
 Two functions $f$ and $g$ are linearly independent
-iff their Wronskian determinant $W(f,g) \neq 0$
-where $0$ is the zero function in the vector space
-of continuous functions.
+iff their Wronskian determinant $W(f,g) \neq \mathbf{0}$
+where $\mathbf{0}$ is the zero function in the vector space
+of continuous and differentiable functions on some interval $I$.
 
 We compute:
 
 \begin{align}
 	W(f,g) = \begin{vmatrix} xe^x & x^2 \\
 	e^x+xe^x & 2x \end{vmatrix} =
-	2x^2e^x-x^2e^x+x^3x^x \neq 0
+	2x^2e^x-x^2e^x+x^3x^x \neq \mathbf{0}
 \end{align}
 
-We see that $W(f,g) \neq 0$
+We see that $W(f,g) \neq \mathbf{0}$
 so we conclude that $f$ and $g$ are linearly independent.
 
-\medskip
+\pagebreak
 
 \textbf{7. Mass attatched to a spring with a dampener}
 
-Suppose we have an $m = 2$ Kg mass subject
+Suppose we have an $m = 2$ kg mass subject
 a dampening force with the coefficient $c = 14$
 pulled away from a spring $ \Delta x = -2$ meters
 at a force of $F = 48$ Newtons.
@@ -245,11 +249,11 @@ by guessing that $x(t) = e^{rt}$ for some real $r$:
 	\begin{bmatrix} 1 & 1 & 2 \\ 0 & -1 & 9 \end{bmatrix} \sim
 	\begin{bmatrix} 0 & 1 & 11 \\ 0 & -1 & 9 \end{bmatrix} \iff
 	A = 11 \land B = -9 \\
-	\therefore x(x) = 11e^{-3t}-9e^{-4t}
+	\therefore x(t) = 11e^{-3t}-9e^{-4t}
 \end{align}
 
 
-\medskip
+\pagebreak
 
 \textbf{Appendix. Original scratch work}
 
@@ -268,5 +272,18 @@ by guessing that $x(t) = e^{rt}$ for some real $r$:
 \includegraphics[scale=0.075]{6.jpg}
 
 \includegraphics[scale=0.075]{7.jpg}
+
+\medskip
+
+\medskip
+
+\textbf{Closing Remarks}
+
+This concludes my submission for Exam II.
+What did you think of the formatting?
+
+The source code, the individual photos of my scratch work,
+and conversations about why everyone should
+typeset their work in \LaTeX\; are available on request.
 
 \end{document}
